@@ -1,0 +1,87 @@
+declare
+v_eno number(5);
+v_hire date;
+v_expr number(2);
+begin
+v_eno:=&empno;
+select hiredate into v_hire from emp44 where empno=v_eno;
+v_expr:=(sysdate-v_hire)/365;
+if v_expr>40 then
+delete from emp44 where empno=v_eno;
+else
+update emp44 set sal=sal+(sal*0.1) where empno=v_eno;
+end if;
+commit;
+end;
+/
+
+declare
+v_eno number(4);
+v_amt number(4);
+v_sal number(5);
+begin
+v_eno:=&empno;
+v_amt:=&amount;
+update emp44 set sal =sal+v_amt where empno=v_eno;
+select sal into v_sal from emp44 where empno=v_eno;
+if v_sal>5000 then
+rollback;
+dbms_output.put_line('transation cancelled');
+else
+commit;
+dbms_output.put_line('transaction saved');
+end if;
+end;
+/
+
+declare
+v_eno number(4);
+v_job varchar2(10);
+v_pct number(2);
+begin
+v_eno:=&empno;
+select job into v_job from emp44 where empno=&v_eno;
+if v_job ='clerk' then
+v_pct :=10;
+elsif v_job='salesman' then
+v_pct:=15;
+elsif v_job='manager' then
+v_pct:=20;
+else
+v_pct:=5;
+end if;
+update emp44 set sal=sal+(sal*v_pct/100)where empno=v_eno;
+commit;
+end;
+/
+
+v_sno number(3);
+v_s1 number(3);
+v_s2 number(3);
+v_s3 number(3);
+v_tot number(3);
+v_avg number(3);
+v_res varchar2(15);
+begin
+v_sno:=&sno;
+select s1,s2,s3 into v_s1,v_s2,v_s3 from student where sno=v_sno;
+v_tot:=v_s1+v_s2+s3;
+v_avg:=v_tot/3;
+if v_s1>=35 and v_s2>=35 and v_s3>=35 then
+if v_avg>=70 then
+v_res:='distinction';
+elsif v_avg>60 then
+v_res:='first';
+elsif v_avg>=50 then
+v_res:='second';
+else
+v_res:='third';
+end if;
+else 
+v_res:='fail';
+end if;
+insert into result values(v_sno,v_tot,v_avg,v_res);
+commit;
+end;
+/
+

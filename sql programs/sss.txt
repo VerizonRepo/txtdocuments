@@ -1,0 +1,19 @@
+create or replace procedure  credit
+(
+pacno in number,
+pamt in number,
+pbal out number
+)
+is
+x number;
+begin
+select count(*) into x from accounts where accno=pacno;
+if x=0 then
+raise_application_error(-20001,'account doesnot exists');
+end if;
+update accounts set bal=bal+pbal where accno=pacno;
+commit;
+select bal into pbal from accounts where accno=pacno;
+end;
+/
+

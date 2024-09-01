@@ -1,0 +1,37 @@
+Write a java program to find the occurance of each character in the given string:-
+input: india
+output: {a=1, d=1, i=2, n=1}
+
+
+int count=0;
+for(int i=o;i<str.length;i++){
+
+for(int j=i+1;j<str.length;j++)
+{
+   if(str(i)==str(j)
+{
+      cnt++;
+}
+if(cnt>=1)
+   Stsrem.out.println(cnt+" "+str.charAt(i)+""+str.charAt(1)+""+str.charAt(2)+""+
+str.charAt(3)+""+str.charAt(4);
+}
+
+
+}// end of outerloop
+
+
+find a second highest salary from employee table
+
+
+select max(sal)from employee where sal<(select ma(sal)from employee);
+
+
+
+syntax of even property binding
+
+[msg]=msg
+
+
+event binding
+(click)=getdata()

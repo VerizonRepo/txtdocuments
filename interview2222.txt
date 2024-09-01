@@ -1,0 +1,48 @@
+public Interface Demo{
+
+public int add(a,b);
+
+}// end of the interface
+
+
+public class Demo2{
+
+public static void main(String []arg)
+
+
+Demo=(int a,int b)=>
+{
+
+Demo2 d=new Demo2()
+
+return a+b;
+d.add(10,20);
+
+}
+
+System.out.Println(d);
+}
+
+
+List<String> names=Arrays.asList("java","net","Angular","Python");
+
+Stream<String> stream=Stream.of(names)
+       .Filter(s-> s.St
+artsWith("j")
+.(System.out::Println);
+
+
+
+
+
+String str="HelloWorld";
+str.concact("java");
+System.out.Print(str);
+
+
+
+
+Employee
+
+sal
+select *from sal where sal>5000 and sal<100000;        

@@ -1,0 +1,32 @@
+create table location
+(
+location_id number primary key,
+regional_group varchar2(15)
+)
+
+create table department
+(
+department_id number(3) primary key,
+name varchar2(20),
+location_id references location(location_id)
+)
+
+create table job
+(
+job_id number primary key,
+function varchar2(20)
+)
+
+create table employee
+(
+employee_id number(5),
+last_name varchar2(15),
+first_name varchar2(15),
+middle_name char(1),
+job_id references job(job_id),
+manager_id number(4),
+hiredate date,
+salary number(5),
+comm number(4),
+department_id references department(department_id)
+)

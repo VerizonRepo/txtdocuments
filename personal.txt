@@ -1,0 +1,45 @@
+spring.datasource.url=jdbc:h2:mem:testdb;
+spring.datasource.driver-class-name=org.h2.Driver
+spring.datasource.username=sa
+spring.datasource.password=
+spring.h2.console.enabled=true
+spring.data.jpa.repositories.bootstrap-mode=default
+spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+spring.jpa.defer-datasource-initialization=true
+
+
+
+insert into STOCK_PRICE_DTLS(STOCK_PRICE_ID,COMPNAY_NAME,COMPANY_STOCK_PRICE)values (101,'SBI',430.00);
+insert into STOCK_PRICE_DTLS(STOCK_PRICE_ID,COMPNAY_NAME,COMPANY_STOCK_PRICE)values (102,'BHEL',43.00);
+insert into STOCK_PRICE_DTLS(STOCK_PRICE_ID,COMPNAY_NAME,COMPANY_STOCK_PRICE)values (103,'HDFC',500.00);
+insert into STOCK_PRICE_DTLS(STOCK_PRICE_ID,COMPNAY_NAME,COMPANY_STOCK_PRICE)values (104,'HCL',499.00);
+insert into STOCK_PRICE_DTLS(STOCK_PRICE_ID,COMPNAY_NAME,COMPANY_STOCK_PRICE)values (105,'TCS',1400.00);
+
+@EnableAutoConfiguration(exclude = {DataSourceAutoConfiguration.class, DataSourceTransactionManagerAutoConfiguration.class, HibernateJpaAutoConfiguration.class})
+
+
+(exclude={DataSourceAutoConfiguration.class})
+spring.datasource.driver-class-name=oracle.jdbc.driver.OracleDriver
+spring.datasource.url=jdbc:oracle:thin:@localhost:1521:xe
+spring.datasource.username=system
+spring.datasource.password=amma
+spring.jpa.show-sql=true
+spring.jpa.hibernate.ddl-auto=create
+spring.jpa.database-platform=org.hibernate.dialect.Oracle10gDialect
+server.port=9090
+spring-boot:run
+
+
+#jdbc.driver=oracle.jdbc.driver.OracleDriver
+#jdbc.url=jdbc:oracle:thin:@localhost:1571:xe
+#jdbc.username=system
+#jdbc.password=amma
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.Oracle10gDialect
+# MySQL DB properties
+jdbc.driver=com.mysql.jdbc.Driver
+jdbc.url=jdbc:mysql://localhost:3306/manikyaraju
+jdbc.username=root
+jdbc.password=Manikyaraju@12
+org.hibernate.dialect.Dialect = org.hibernate.dialect.MySQL8Dialect
+
+$2a$10$YVUt1L.PR72LLbkI7kz/DObZIzyqsEwmhv7uX9WxpTjbEOdstgDmW

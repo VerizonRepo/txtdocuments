@@ -1,0 +1,45 @@
+declare
+v_sacno number(4);
+v_tacno number(4);
+v_amt number(5);
+v_bal number(7);
+begin
+ v_sacno:=&sacno;
+ v_tacno:=&tacno;
+ v_amt:=&amount;
+select bal into v_bal from accounts where accno=v_sacno;
+if v_amt>v_bal then
+dbms_output.put_line('insufficient balance');
+else
+update accounts set bal=bal-v_amt where accno=v_sacno;
+update accounts set bal=bal+v_amt where accno=v_tacno;
+commit;
+dbms_output.put_line('money transfer successfully completed');
+end if;
+end;
+/
+
+declare
+v_acno number(4);
+v_type char(1);
+v_amt number(5);
+v_bal number(4);
+begin
+v_acno:=&accno;
+v_type:='&type';
+v_amt:=&amount;
+if v_type='d'
+select bal into v_bal from accounts where accno=v_acno;
+if v_amt >v_bal then
+dbms_output.put_line('insufficient balance');
+else
+update accounts set bal=bal-v_amt where accno=&accno;
+end if;
+elsif v_type='d' then
+update accounts set bal=bal+v_amt where accno=v_accno;
+else 
+dbms_output.put_line('invaild transaction type');
+end if;
+commit;
+end;
+/

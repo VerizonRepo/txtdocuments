@@ -1,0 +1,252 @@
+declare
+v_eno number(4);
+v_ename varchar2(15);
+v_sal number(7);
+begin
+v_eno:=&empno;
+select ename,sal into v_ename,v_sal from emp00 where empno=v_eno;
+dbms_output.put_line(v_ename ||'  '|| v_sal);
+end;
+/
+
+     EMPNO ENAME                       SAL
+---------- -------------------- ----------
+         1 mani                       9000
+         2 raju                       7000
+         3 manikya                    8000
+         4 pavan                      6000
+         5 ramu                       7000
+
+SQL> set serveroutput on
+SQL> declare
+  2  v_eno number(4);
+  3  v_ename varchar2(15);
+  4  v_sal number(7);
+  5  begin
+  6  v_eno:=&empno;
+  7  select ename,sal into v_ename,v_sal from emp00 where empno=v_eno;
+  8  dbms_output.put_line(v_ename ||'  '|| v_sal);
+  9  end;
+ 10  /
+Enter value for empno: 1
+old   6: v_eno:=&empno;
+new   6: v_eno:=1;
+mani  9000
+
+PL/SQL procedure successfully completed.
+
+SQL>
+
+declare
+v_eno number(4);
+v_hire date;
+v_expr number(2);
+begin
+v_eno:=&empid;
+select hiredate into v_hire from emp99 where empid=v_eno;
+v_expr:=(sysdate-v_hire)/365;
+dbms_output.put_line('experience='||v_expr||'years');
+end;
+/
+
+SQL> declare
+  2  v_eno number(4);
+  3  v_hire date;
+  4  v_expr number(2);
+  5  begin
+  6  v_eno:=&empid;
+  7  select hiredate into v_hire from emp99 where empid=v_eno;
+  8  v_expr:=(sysdate-v_hire)/365;
+  9  dbms_output.put_line('experience='||v_expr||'years');
+ 10  end;
+ 11  /
+Enter value for empid: 102
+old   6: v_eno:=&empid;
+new   6: v_eno:=102;
+experience=2years
+
+PL/SQL procedure successfully completed.
+
+SQL> commit;
+
+Commit complete.
+
+SQL>
+
+SQL> declare
+  2  v_eno number(4);
+  3  v_hire date;
+  4  v_expr number(2);
+  5  begin
+  6  v_eno:=&empid;
+  7  select hiredate into v_hire from emp99 where empid=v_eno;
+  8  v_expr:=(sysdate-v_hire)/365;
+  9  dbms_output.put_line('experience='||v_expr||'years');
+ 10  end;
+ 11  /
+Enter value for empid: 102
+old   6: v_eno:=&empid;
+new   6: v_eno:=102;
+experience=2years
+
+PL/SQL procedure successfully completed.
+
+SQL> commit;
+
+Commit complete.
+
+SQL>
+SQL> declare
+  2  v_eno number(4);
+  3  v_hire date;
+  4  v_expr number(2);
+  5  begin
+  6  v_eno:=&empid;
+  7  select hiredate into v_hire from emp99 where empid=v_eno;
+  8  v_expr:=(sysdate-v_hire)/365;
+  9  dbms_output.put_line('experience='||v_expr||'years');
+ 10  end;
+ 11  /
+Enter value for empid: 102
+old   6: v_eno:=&empid;
+new   6: v_eno:=102;
+experience=2years
+
+PL/SQL procedure successfully completed.
+
+SQL> commit;
+
+Commit complete.
+
+SQL>SQL> declare
+  2  v_eno number(4);
+  3  v_hire date;
+  4  v_expr number(2);
+  5  begin
+  6  v_eno:=&empid;
+  7  select hiredate into v_hire from emp99 where empid=v_eno;
+  8  v_expr:=(sysdate-v_hire)/365;
+  9  dbms_output.put_line('experience='||v_expr||'years');
+ 10  end;
+ 11  /
+Enter value for empid: 102
+old   6: v_eno:=&empid;
+new   6: v_eno:=102;
+experience=2years
+
+PL/SQL procedure successfully completed.
+
+SQL> commit;
+
+Commit complete.
+
+SQL>
+SQL> declare
+  2  v_eno number(4);
+  3  v_hire date;
+  4  v_expr number(2);
+  5  begin
+  6  v_eno:=&empid;
+  7  select hiredate into v_hire from emp99 where empid=v_eno;
+  8  v_expr:=(sysdate-v_hire)/365;
+  9  dbms_output.put_line('experience='||v_expr||'years');
+ 10  end;
+ 11  /
+Enter value for empid: 102
+old   6: v_eno:=&empid;
+new   6: v_eno:=102;
+experience=2years
+
+PL/SQL procedure successfully completed.
+
+SQL> commit;
+
+Commit complete.
+
+SQL>
+
+
+
+
+SQL> declare
+  2  v_eno number(4);
+  3  v_hire date;
+  4  v_expr number(2);
+  5  begin
+  6  v_eno:=&empid;
+  7  select hiredate into v_hire from emp99 where empid=v_eno;
+  8  v_expr:=(sysdate-v_hire)/365;
+  9  dbms_output.put_line('experience='||v_expr||'years');
+ 10  end;
+ 11  /
+Enter value for empid: 102
+old   6: v_eno:=&empid;
+new   6: v_eno:=102;
+experience=2years
+
+PL/SQL procedure successfully completed.
+
+SQL> commit;
+
+Commit complete.
+
+SQL>
+
+
+
+declare
+v_eno number(4);
+v_sal number(7);
+v_totsal number(7);
+v_comm number(7);
+begin
+v_eno:=&empid;
+select sal,comm into v_sal,v_comm from emp9 where empid=v_eno;
+v_totsal:=v_sal+v_comm;
+dbms_output.put_line('totsal = '||v_totsal);
+end;
+/
+SQL> declare
+  2  v_eno number(4);
+  3  v_sal number(7);
+  4  v_totsal number(7);
+  5  v_comm number(7);
+  6  begin
+  7  v_eno:=&empid;
+  8  select sal,comm into v_sal,v_comm from emp9 where empid=v_eno;
+  9  v_totsal:=v_sal+v_comm;
+ 10  dbms_output.put_line('totsal = '||v_totsal);
+ 11  end;
+ 12  /
+Enter value for empid: 1
+old   7: v_eno:=&empid;
+new   7: v_eno:=1;
+totsal = 18000
+
+PL/SQL procedure successfully completed.
+
+ update emp set hiredate='03-april-1980' where empid=105;
+
+
+declare
+ v_eno number(4);
+ v_hire date;
+ v_expr number(2);
+begin
+ v_eno:=&eno;
+ select hiredate into v_hire from emp44 where empno=v_eno;
+ v_expr:=(sysdate - v_hire)/365;
+ if v_expr>40 then
+ delete from emp44 where empno=v_eno;
+ else
+ update emp44 set sal=sal+(sal*0.1) where empno=v_eno;
+ end if;
+ commit;
+end;
+/
+
+
+
+
+
+

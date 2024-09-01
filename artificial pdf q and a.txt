@@ -1,0 +1,93 @@
+Artificial Intelligence is one of the emerging technologies which tries to simulate human reasoning in AI systems.
+ John McCarthy invented the term Artificial Intelligence in the year 1950.
+
+
+
+Artificial Intelligence is the ability of a computer program to learn and think.
+ Everything can be considered Artificial intelligence if it involves a program doing something that we would normally think would rely on the intelligence of a human.
+
+The advantages of Artificial intelligence applications are enormous and can revolutionize any professional sector. Let’s see some of them
+
+1) Reduction in Human Error:
+
+The phrase “human error” was born because humans make mistakes from time to time. 
+Computers,however, do not make these mistakes if they are programmed properly. With Artificial intelligence, 
+the decisions are taken from the previously gathered information applying a certain set of algorithms.
+ So errors are reduced and the chance of reaching accuracy with a greater degree of precision is a possibility.
+
+
+3) Available 24x7:
+
+An Average human will work for 4–6 hours a day excluding the breaks.
+ Humans are built in such a way to get some time out for refreshing themselves and get ready for a 
+new day of work and they even have weekly offed to stay intact with their work-life and personal life.
+ But using AI we can make machines work 24x7 without any breaks and they don’t even get bored, unlike humans.
+
+5) Digital Assistance:
+
+Some of the highly advanced organizations use digital assistants to interact with users which saves the need for human resources.
+ The digital assistants also used in many websites to provide things that users want. 
+We can chat with them about what we are looking for.
+ Some chatbots are designed in such a way that it’s become hard to determine that we’re chatting with a chatbot or a human being.
+
+6) Faster Decisions:
+
+Using AI alongside other technologies we can make machines take decisions faster than a human and carry out actions quicker.
+ While taking a decision human will analyze many factors both emotionally
+ and practically but AI-powered machine works on what it is programmed and delivers the results in a faster way.
+
+7) Daily Applications:
+
+Daily applications such as Apple’s Siri, Window’s Cortana, Google’s OK Google are frequently used in our daily routine whether it is for searching a location, taking a selfie, making a phone call, replying to a mail and many more.
+
+Example: Around 20 years ago, when we are planning to go somewhere we used to ask a person who already went there for the directions. But now all we have to do is say “OK Google where is Visakhapatnam”. It will show you Visakhapatnam’s location on google map and the best path between you and Visakhapatnam.
+
+
+
+As every bright side has a darker version in it. Artificial Intelligence also has some disadvantages. Let’s see some of them
+
+1) High Costs of Creation:
+
+As AI is updating every day the hardware and software need to get updated with time to meet the latest requirements. 
+Machines need repairing and maintenance which need plenty of costs. It’ s creation requires huge costs as they are very complex machines.
+
+2) Making Humans Lazy:
+
+AI is making humans lazy with its applications automating the majority of the work.
+ Humans tend to get addicted to these inventions which can cause a problem to future generations.
+
+3) Unemployment:
+
+As AI is replacing the majority of the repetitive tasks and other works with robots,
+human interference is becoming less which will cause a major problem in the employment standards.
+ Every organization is looking to replace the minimum qualified individuals with AI robots which can do similar work with more efficiency.
+
+4) No Emotions:
+
+There is no doubt that machines are much better when it comes to working efficiently but they cannot replace the human connection that makes the team. 
+Machines cannot develop a bond with humans which is an essential attribute when comes to Team Management.
+
+5) Lacking Out of Box Thinking:
+
+Machines can perform only those tasks which they are designed or programmed to do, 
+anything out of that they tend to crash or give irrelevant outputs which could be a major backdrop.
+
+SUMMARY:
+
+These are some advantages and disadvantages of Artificial Intelligence. Every new invention or breakthrough will have both, but we as humans need
+ to take care of that and use the positive sides of the invention to create a better world. Artificial intelligence has massive potential advantages. 
+The key for humans will ensure the “rise of the robots” doesn’t get out of hand. Some people also say that Artificial intelligence can destroy human civilization if it goes into the wrong hands
+. But still, none of the AI applications made at that scale that can destroy or enslave humanity.
+
+1K
+
+
+5
+
+1K
+
+
+5
+
+
+

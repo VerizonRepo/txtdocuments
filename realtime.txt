@@ -1,0 +1,11 @@
+State_id number primary key,
+state_name varchar2(20)
+
+
+ssn number primary key,
+first_name varchar2(20),
+last_name varchar2(20),
+gender char(1),
+dob date
+state_name varchar2(20),
+created_date date

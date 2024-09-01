@@ -1,0 +1,59 @@
+create or replace procedure raise_salary
+is
+begin
+update emp set sal=sal+1000;
+commit;
+end;
+/
+
+create or replace procedure raise_salary
+(
+peno in number,
+pamt in number
+)
+is 
+begin
+update emp set sal=sal+pamt where empno=peno;
+commit;
+end;
+/
+
+create or replace procedure raise_salary
+(
+peno in number,
+pamt in number,
+psal out number
+)
+is 
+begin
+update emp set sal=sal+pamt where empno=peno;
+commit;
+select sal into  psal from emp where empno=peno;
+end;
+/
+
+create table accounts
+(
+accno number(3),
+actype char(1),
+bal number(5)
+)
+
+create or replace procedure debit
+(
+pacno in number,
+pamt in number,
+pbal out number
+)
+is 
+vbal number;
+begin
+select bal into vbal from accounts where accno=pacno;
+if pamt>vbal then
+raise_application_error(-20001,'insufficient balance');
+end if;
+update accounts set bal=bal-pamt where accno=pacno;
+commit;
+select bal into pbal from accounts where accno=pacno;
+end;
+/

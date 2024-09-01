@@ -1,0 +1,94 @@
+declare
+cursor c1 is select sal from emp44;
+t number:=0;
+begin
+for s in c1
+loop
+t:=t+s.sal;
+end loop;
+dbms_output.put_line('totsal='||t);
+end;
+/ 
+
+declare
+cursor c1 is select sal from emp44;
+t number:=0;
+begin
+for r in c1
+loop
+ if r.sal>t then
+t:=r.sal;
+end if;
+end loop;
+dbms_output.put_line('maxsal='||t);
+end;
+/
+
+declare
+cursor c1 is select sal from emp44;
+t number;
+vsal number(7);
+begin
+open c1;
+fetch c1 into t;
+loop
+fetch c1 into vsal;
+exit when c1 %notfound;
+if vsal< t then
+t:=vsal;
+end if;
+end loop;
+close c1;
+dbms_output.put_line('minsal='||t);
+end;
+/
+declare
+cursor c1 is select ename from emp44;
+s varchar2(500);
+begin
+for r in c1
+loop
+s:=s||r.ename||',';
+end loop;
+dbms_output.put_line(rtrim(s,','));
+end;
+/
+
+declare
+veno number(4);
+vename varchar2(20);
+vsal number(7);
+begin
+veno:=&empno;
+select ename,sal into vename,vsal from emp44 where empno=veno;
+dbms_output.put_line(vename||' '||vsal);
+exception
+when no_data_found then
+dbms_output.put_line('invalid empno');
+when value_error then
+dbms_output.put_line('value exceeding size');
+end;
+/
+declare
+a number(3);
+b number(3);
+c number(3);
+ abc exception ;
+begin
+a:=&a;
+b:=&b;
+if b=1 then
+raise abc;
+end if;
+c:=a/b;
+dbms_output.put_line(c);
+exception
+when zero_divide then
+dbms_output.put_line('divisor cannot be zero');
+when value_error then
+dbms_output.put_line('value exceeeding size');
+when abc then
+dbms_output.put_line('divisor cannot be one');
+end;
+/
+ 

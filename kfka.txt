@@ -1,0 +1,10 @@
+kafka-server-start.bat D:\kfka\kafka_2.13-3.2.1\config\server.properties
+
+
+kafka-topics.bat --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic nit-tpc2
+kafka-topics.bat --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic nit-tpc1
+
+kafka-console-producer.bat --bootstrap-server localhost:9092 --topic nit-tpc1 
+
+kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic nit-tpc2
+zookeeper-server-start.bat D:\kfka\kafka_2.13-3.2.1\config\zookeeper.properties
